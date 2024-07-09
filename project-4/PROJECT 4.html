@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator Min,Max,Mean, Modus</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!--untuk menyambungkan jquery ke html-->
+<style>
+    .header { /*css internal*/
+        background-color: lightslategray; /*SEBAGAI PENENTU WARNA LATAR BELAKANG*/
+        padding: 20px; /*MENATA LETAK PADA HALAMAN WEBSITE AGAR TERLIHAT LEBIH RAPI*/
+        text-align: center;} /*MENGATUR POSISI TEKS AGAR SESUAI KEBUTUHAN*/
+</style>
+</head>
+<body>
+    <div class="header"> <!--untuk memanggil class header-->
+        <h1>Calculator</h1>
+        <p>|| MIN || MAX || MEAN || MODUS ||</p>
+    <label for="numbersInput">Masukan Angka (beri koma sebagai angka baru) || contoh masukan 1,2,3,2,3: </label> <!--untuk 
+        membiarkan pengguna memasukkan nomor.-->
+    <input type="text" id="numbersInput"> <!--untuk membuat sebuah input teks pada halaman web yang 
+        mengizinkan pengguna untuk memasukkan teks atau angka ke dalam suatu formulir.-->
+    <button id="calculateBtn">Calculate</button><!--untuk membuat sebuah tombol pada halaman web 
+        dengan teks "Calculate" sebagai labelnya.-->
+    <div id="resultContainer"></div><!--digunakan untuk membuat suatu kontainer atau wadah di 
+        dalam halaman web yang dapat digunakan untuk menampilkan hasil atau konten dinamis.-->
+
+<script>
+    $(document).ready(function() {
+        $('#calculateBtn').click(function() { /*-untuk menentukan perilaku yang akan dijalankan 
+            ketika tombol dengan ID "calculateBtn" diklik.*/
+            var numbersInput = $('#numbersInput').val(); 
+            var numbers = numbersInput.split(',').map(function(num) { /*split  untuk memisahkan nilai input yang diterima menggunakan tanda koma
+                ,untuk mengonversi setiap elemen dalam array menjadi bilangan bulat*/
+                return parseInt(num);
+            });
+    
+            var min = Math.min.apply(null, numbers); /*kode untuk mencari nilai minimum*/
+            var max = Math.max.apply(null, numbers); /*kode untuk mencari nilai maksimum*/
+            var sum = numbers.reduce(function(a, b) { /*kode untuk menghitung jumlah total elemen*/
+                return a + b;
+            });
+            var mean = sum / numbers.length; /*kode untuk mencari nilai mean*/
+    
+            /*kode untuk mencari nilai modus*/
+            var mode = {}; /*objek kosong yang berguna menyimpan data*/
+            var modeNumber = null; /*sebagai nilai awal null*/
+            var modeCount = 0; /*sebagai nilai awal 0*/
+            for (var i = 0; i < numbers.length; i++) { 
+                if (mode[numbers[i]] === undefined) {
+                    mode[numbers[i]] = 1;/*agar properti baru dengan nama kunci
+                    yang sesuai dan diberi nilai awal 1 sehingga dapat menghitung jumlah kemunculan*/
+                } else {
+                    mode[numbers[i]]++;
+                } /*untuk menghitung frekuensi (jumlah kemunculan)*/
+    
+                if (mode[numbers[i]] > modeCount) {
+                    modeCount = mode[numbers[i]];
+                    modeNumber = numbers[i];
+                }
+            }/* untuk memperbarui modeCount dan modeNumber jika ditemukan angka dengan frekuensi
+             kemunculan yang lebih tinggi, sehingga pada akhirnya nilai modeNumber akan berisi angka yang menjadi mode dalam array numbers.*/
+    
+            $('#resultContainer').html('<p>Min: ' + min + '</p>' +
+                '<p>Max: ' + max + '</p>' +
+                '<p>Mean: ' + mean + '</p>' +
+                '<p>Modus: ' + modeNumber + ' (ada ' + modeCount + ' angka)</p>');
+                /*untuk menampilkan hasil statistik (min, max, mean, modus) dari variabel yang sudah dihitung sebelumnya*/
+        });
+    });    
+</script>
+</body>
+</html>
