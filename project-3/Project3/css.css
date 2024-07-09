@@ -1,0 +1,58 @@
+body {margin: 0;}
+  /* Style the header */
+.header {
+    background-color: lightslategray; /*SEBAGAI PENENTU WARNA LATAR BELAKANG*/
+    padding: 20px; /*MENATA LETAK PADA HALAMAN WEBSITEAGAR TERLIHAT LEBIH RAPI*/
+    text-align: center;} /*MENGATUR POSISI TEKS AGAR SESUAI KEBUTUHAN*/
+.topnav {/* The navbar container */
+        overflow: hidden; /*UNTUK MEMMBUAT SEBUAH OBJEK BOX*/
+        background-color: #333;} /*UNTUK WARNA LATAR BELAKANG*/
+.topnav a {/*untuk navbar link*/
+        float: right; 
+        display: block; /*mengatur tampilnya suatu elemen.*/
+        color: #f2f2f2;
+        text-align: center; 
+        padding: 14px 16px;
+        text-decoration: none;} /*untuk model dekorasi text*/
+.topnav a:hover {/* UNTUK WARNA JIKA NAVIGASI DITEKAN */
+        background-color: #ddd;
+        color: black;}
+    /* Membuat dua kolom sama yang mengapung bersebelahan */
+.column { /*layout kanan*/
+        float: right; /*mengatur layout dengan membuat sebuah elemen berada di kiri atau kanan sebuah Container.*/
+        width: 70%; /* mengatur minimal lebar dari sebuah obyek*/
+        min-height:500px; /* mengatur minimal tinggi dari sebuah obyek.*/
+        background-color: rgb(86, 75, 75);}
+.column-left { /*layout kiri*/
+        float: left;
+        width: 30%;
+        min-height:500px;
+        background-color: dimgrey;}
+      
+    /* Menghapus float setelah kolom */
+.row:after {
+        content: ""; /*memasukan atau menyisipkan sebuah karakter lain ke dalam tag HTML dibagian awal tag (:before) dan bagian akhir tag (:after).*/
+        display: table; 
+        clear: both;} /*membersihkan element yang sebelumnya telah mengalami float.*/
+    /* Tata letak responsif - membuat tiga kolom menumpuk di atas satu sama lain, bukan bersebelahan pada layar yang lebih kecil (lebar 600px atau kurang) */
+@media screen and (max-width: 600px) {
+.column {
+          width: 100%; }
+    }
+li.dropdown {display: inline-block;} /**/
+.dropdown-content { /*tempat menyimpan konten dropdown yang sebenarnya.*/
+      display: none;
+      position: right; /*mengatur posisi*/
+      background-color:darkgray;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /*membuat bayangan untuk kotak atau elemen kontainer.*/
+      z-index: 1;} /*mengatur elemen mana yang ada di bagian depan dan belakang*/
+.dropdown-content a { /**/
+  color:rgb(130, 108, 108);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;}
+.dropdown-content a:hover {background-color:rgb(70, 83, 83);} /*menampilkan menu dropdown ketika pengguna menggerakkan mouse di atas tombol dropdown. Dropdown Menu dalam Navbar.*/
+.dropdown:hover .dropdown-content {display: block;} /**/
+
