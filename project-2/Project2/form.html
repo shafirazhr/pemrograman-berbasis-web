@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEMESANAN</title>
+    <h1>Form Pemesanan</h1>
+</head>
+<br>
+    <form method="post"> <!--METODE PENGIRIMAN DATA YANG DATANYA TIDAK DISIMPAN PADA URL-->
+        Type ALBUM: <br>
+        <input type="checkbox"> 2 cool 4 skool<br> <!--SEBAGAI MASUKAN DATA DENGAN MEMBERIKAN CHECKLIST ATAU TANDA CNETANG PADA KOTAK-->
+        <input type="checkbox"> O!RUL8,2?<br>
+        <input type="checkbox">Skool Luv Affair <br>
+        <input type="checkbox">Dark & Wild<br>
+        <input type="checkbox">The Most Beautiful Moment In Life<br>
+        <input type="checkbox"> Wings <br>
+        <input type="checkbox"> You Never Walk Alone<br>
+        <input type="checkbox">Love Yourself<br>
+        <input type="checkbox"> Map of the Soul<br>
+        <input type="checkbox"> BE <br>
+        <input type="checkbox"> Butter<br>
+        <input type="checkbox"> Proof <br>
+        Official shop / Shop INA?<br>
+        <input type="radio" name="opsi" value="Official Shop"> Weverse Shop <br> <!--MEMBUAT TOMBOL PILIHAN AGAR PENGGUNA HANYA DAPAT MEMILIH SALAH SATUNYA SAJA-->
+        <input type="radio" name="opsi" value="Shop Ina"> KTOWN4U <br>
+        <input type="text" placeholder="keterangan+jumlah produk"><br> <!--MEMBUAT KOLOM PENGISIAN UNTUK USER-->
+        Pembayaran?<br>
+        <input type="radio" name="opsi" value="Official Shop"> BCA (1234568101) <br> <!--TOMBOL PILIHAN AGAR PENGGUNA HANYA MEMBERIKAN 1 PILIHAN SAJA-->
+        <input type="radio" name="opsi" value="Shop Ina"> BNI (1430328309) <br>
+        <input type="radio" name="opsi" value="Shop Ina"> DANA (089876543218) <br>
+        <input type="radio" name="opsi" value="Shop Ina"> SHOPEEPAY (089876543218) <br>
+        <input type="radio" name="opsi" value="Shop Ina"> GOPAY (089876543218) <br>
+    <hr [align=“left”|”center”|”right”] [size=“n”] [width=“nnn”] [noshade]>
+    <form action="/action_page.php"></form> <!--MEMBERI TAU MANA SAJA HALAMAN DATA YANG AKAN DIKIRIM-->
+    <input style="width: 60%;" placeholder="Nama Pelanggan" type="text/date"> <!--AGAR TERLIHAT KOLOM INI BERFUNGSI UNTUK DIISI APA SAJA-->
+    <input style="width: 60%;" placeholder="Gmail" type="text/date">
+    <input style="width: 60%;" placeholder="No WhatsApp" type="text/date"> 
+    <br>Ekspedisi?
+    <br>
+    <input type="radio" name="opsi" value="Official Shop"> JNE<br> <!--MEMBUAT TOMBOL PILIHAN AGAR BISA MEMILIH SALAH SATU SAJA-->
+    <input type="radio" name="opsi" value="Shop Ina"> J&T <br>
+    <input type="radio" name="opsi" value="Shop Ina"> ANTARAJA <br>
+    <input type="radio" name="opsi" value="Shop Ina"> SICEPAT <br>
+    <input type="radio" name="opsi" value="Shop Ina"> KANTOR POS <br>
+    <form method="post"><br> <!--METODE PENGIRIMAN DATA YANG DATANYA TIDAK DISIMPAN PADA URL-->
+        <select name="Provinsi">
+        <option selected disabled hidden>Provinsi</option> <!--AGAR PROVINSI TIDAK DAPAT DIPILIH OLEH PENGGUNA-->
+        <option>Jawa Tengah</option> <!--SEBAGAI PILIHAN-->
+        <option>Jawa Timur <br>
+        <option>Jawa Barat <br>
+        <option>DKI Jakarta <br>
+        <option>DI Yogyakarta <br>
+        <option>Banten <br>
+        <option>Bali <br>
+        <option>Nusa Tenggara Barat <br>
+        <option>Nusa Tenggara Timur <br>
+        <option>Aceh <br>
+        <option>Sumatera Utara <br>
+        <option>Sumatera Selatan <br>
+        <option>Sumatera Barat <br>
+        <option>Bengkulu <br>
+        <option>Riau <br>
+        <option>Kepulauan Riau <br>
+        <option>Jambi <br>
+        <option>Lampung <br>
+        <option>Bangka Belitung <br>
+        <option>Kalimantan Timur <br>
+        <option>Kalimantan Barat <br>
+        <option>Kalimantan Selatan <br>
+        <option>Kalimantan Tengah <br>
+        <option>Kalimantan Utara <br>
+        <option>Sulawesi Utara <br>
+        <option>Sulawesi Barat <br>
+        <option>Sulawesi Tengah <br>
+        <option>Gorontalo <br>
+        <option>Sulawesi Tenggara <br>
+        <option>Sulawesi Selatan <br>
+        <option>Maluku Utara <br>
+        <option>Maluku <br>
+        <option>Papua Barat <br>
+        <option>Papua <br>
+        <option>Papua Selatan <br>
+        <option>Papua Tengah <br>
+        <option>Papua Pegunungan <br>
+        <option>Papua Barat Daya <br>
+        </select>
+        <td><input style="width: 50%;" placeholder="kota/kabupaten" type="text/date"></td> <!--AGAR PENGGUNA TAHU KOLOM INI UNTUK DIISI APA SAJA-->
+        <th><input style="width: 45%;" placeholder="kecamatan" type="text/date"></th>
+        <td><input style="width: 45%;" placeholder="kelurahan/desa" type="text/date"></td>
+        <th><input style="width: 45%;" placeholder="RT/RW" type="text/date"></th>
+        <td><input style="width: 45%;" placeholder="KODE POS" type="text/date"></td>
+        <b>ALAMAT LENGKAP: <b> <br>
+            <form method="post"> <textarea rows="10" cols="40" wrap="physical" name="alamat">
+            </textarea><br>
+            <input type="submit" value="Kirim"> 
+            <input type="reset" value="Ulang">
+    </form>
+</body>
+</html>
