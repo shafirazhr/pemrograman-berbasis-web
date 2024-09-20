@@ -19,7 +19,6 @@
         <div class="cover-3d">
             <h1 class="wedding-title">Save The Date</h1>
             <h2>Novia & Zain</h2>
-            <p><strong>Resepsi:</strong> 23 Januari 2025, 10:00 AM</p>
 
             <div id="countdown" class="countdown-container">
                 <div class="countdown-item">
